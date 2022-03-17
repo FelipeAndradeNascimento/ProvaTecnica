@@ -1,0 +1,6 @@
+Prova Tecnica.
+
+Dentro deste repositorio, segue um projeto basico de CRUD, seguindo as solicitações informadas no email para a realização da prova tecnica.
+O projeto não apresenta um modulo de testes unitarios, pois segundo informado não tenho pratica com o mesmo.
+Conheço o processo, ja fiz parte de squads que profissionais de QA, eram os responsaveis pela criação e manutenção dos testes unitarios.
+Já estudo e tenho total interesse em obter pratica neste processo.
