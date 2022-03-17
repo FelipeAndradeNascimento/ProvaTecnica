@@ -10,22 +10,22 @@ using WebMvcMysql.Models;
 
 namespace WebMvcMysql.Controllers
 {
-    public class UsuariosController : Controller
+    public class CaminhaoController : Controller
     {
         private readonly Contexto _context;
 
-        public UsuariosController(Contexto context)
+        public CaminhaoController(Contexto context)
         {
             _context = context;
         }
 
-        // GET: Usuarios
+        // GET: Caminhao
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Usuario.ToListAsync());
+            return View(await _context.Caminhao.ToListAsync());
         }
 
-        // GET: Usuarios/Details/5
+        // GET: Caminhao/Details/ID
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,39 +33,37 @@ namespace WebMvcMysql.Controllers
                 return NotFound();
             }
 
-            var usuario = await _context.Usuario
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (usuario == null)
+            var caminhao = await _context.Caminhao.FirstOrDefaultAsync(m => m.CaminhaoId == id);
+            if (caminhao == null)
             {
                 return NotFound();
             }
 
-            return View(usuario);
+            return View(caminhao);
         }
 
-        // GET: Usuarios/Create
+        // GET: Caminhao/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Usuarios/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Caminhao/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome")] Usuario usuario)
+        public async Task<IActionResult> Create([Bind("CaminhaoId,CaminhaoModelo," +
+            "CaminhaoAnoFabricacao,CaminhaoAnoModelo")] Caminhao caminhao)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(usuario);
+                _context.Add(caminhao);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(usuario);
+            return View(caminhao);
         }
 
-        // GET: Usuarios/Edit/5
+        // GET: Caminhao/Edit/ID
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -73,22 +71,21 @@ namespace WebMvcMysql.Controllers
                 return NotFound();
             }
 
-            var usuario = await _context.Usuario.FindAsync(id);
-            if (usuario == null)
+            var caminhao = await _context.Caminhao.FindAsync(id);
+            if (caminhao == null)
             {
                 return NotFound();
             }
-            return View(usuario);
+            return View(caminhao);
         }
 
-        // POST: Usuarios/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Caminhao/Edit/ID
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome")] Usuario usuario)
+        public async Task<IActionResult> Edit(int id, [Bind("CaminhaoId,CaminhaoModelo," +
+            "CaminhaoAnoFabricacao,CaminhaoAnoModelo")] Caminhao caminhao)
         {
-            if (id != usuario.Id)
+            if (id != caminhao.CaminhaoId)
             {
                 return NotFound();
             }
@@ -97,12 +94,12 @@ namespace WebMvcMysql.Controllers
             {
                 try
                 {
-                    _context.Update(usuario);
+                    _context.Update(caminhao);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!UsuarioExists(usuario.Id))
+                    if (!CaminhaoExists(caminhao.CaminhaoId))
                     {
                         return NotFound();
                     }
@@ -113,10 +110,10 @@ namespace WebMvcMysql.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(usuario);
+            return View(caminhao);
         }
 
-        // GET: Usuarios/Delete/5
+        // GET: Caminhao/Delete/ID
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -124,30 +121,30 @@ namespace WebMvcMysql.Controllers
                 return NotFound();
             }
 
-            var usuario = await _context.Usuario
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (usuario == null)
+            var caminhao = await _context.Caminhao
+                .FirstOrDefaultAsync(m => m.CaminhaoId == id);
+            if (caminhao == null)
             {
                 return NotFound();
             }
 
-            return View(usuario);
+            return View(caminhao);
         }
 
-        // POST: Usuarios/Delete/5
+        // POST: Caminhao/Delete/ID
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var usuario = await _context.Usuario.FindAsync(id);
-            _context.Usuario.Remove(usuario);
+            var caminhao = await _context.Caminhao.FindAsync(id);
+            _context.Caminhao.Remove(caminhao);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool UsuarioExists(int id)
+        private bool CaminhaoExists(int id)
         {
-            return _context.Usuario.Any(e => e.Id == id);
+            return _context.Caminhao.Any(e => e.CaminhaoId == id);
         }
     }
 }

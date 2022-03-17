@@ -1,28 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\CRUD_NET6_MYSQL_AULA\\WebMvcMysql\\WebMvcMysql\\WebMvcMysql.csproj": {}
+    "C:\\Projetos\\exemploPronto\\CRUD-MVC-MYSQL-NET-6\\WebMvcMysql\\WebMvcMysql.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\CRUD_NET6_MYSQL_AULA\\WebMvcMysql\\WebMvcMysql\\WebMvcMysql.csproj": {
+    "C:\\Projetos\\exemploPronto\\CRUD-MVC-MYSQL-NET-6\\WebMvcMysql\\WebMvcMysql.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\CRUD_NET6_MYSQL_AULA\\WebMvcMysql\\WebMvcMysql\\WebMvcMysql.csproj",
+        "projectUniqueName": "C:\\Projetos\\exemploPronto\\CRUD-MVC-MYSQL-NET-6\\WebMvcMysql\\WebMvcMysql.csproj",
         "projectName": "WebMvcMysql",
-        "projectPath": "C:\\Projetos\\CRUD_NET6_MYSQL_AULA\\WebMvcMysql\\WebMvcMysql\\WebMvcMysql.csproj",
-        "packagesPath": "C:\\Users\\valdi\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\CRUD_NET6_MYSQL_AULA\\WebMvcMysql\\WebMvcMysql\\obj\\",
+        "projectPath": "C:\\Projetos\\exemploPronto\\CRUD-MVC-MYSQL-NET-6\\WebMvcMysql\\WebMvcMysql.csproj",
+        "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
+        "outputPath": "C:\\Projetos\\exemploPronto\\CRUD-MVC-MYSQL-NET-6\\WebMvcMysql\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\valdi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -94,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

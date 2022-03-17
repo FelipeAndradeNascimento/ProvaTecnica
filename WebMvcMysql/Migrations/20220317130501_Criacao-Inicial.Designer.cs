@@ -10,7 +10,7 @@ using WebMvcMysql.Data;
 namespace WebMvcMysql.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20211127034536_Criacao-Inicial")]
+    [Migration("20220317130501_Criacao-Inicial")]
     partial class CriacaoInicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,21 +20,31 @@ namespace WebMvcMysql.Migrations
                 .HasAnnotation("ProductVersion", "6.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("WebMvcMysql.Models.Usuario", b =>
+            modelBuilder.Entity("WebMvcMysql.Models.Caminhao", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("CaminhaoId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("Id");
+                        .HasColumnName("CaminhaoId");
 
-                    b.Property<string>("Nome")
+                    b.Property<string>("CaminhaoAnoFabricacao")
                         .IsRequired()
                         .HasColumnType("longtext")
-                        .HasColumnName("Nome");
+                        .HasColumnName("CaminhaoAnoFabricacao");
 
-                    b.HasKey("Id");
+                    b.Property<string>("CaminhaoAnoModelo")
+                        .IsRequired()
+                        .HasColumnType("longtext")
+                        .HasColumnName("CaminhaoAnoModelo");
 
-                    b.ToTable("Usuario");
+                    b.Property<string>("CaminhaoModelo")
+                        .IsRequired()
+                        .HasColumnType("longtext")
+                        .HasColumnName("CaminhaoModelo");
+
+                    b.HasKey("CaminhaoId");
+
+                    b.ToTable("Caminhao");
                 });
 #pragma warning restore 612, 618
         }

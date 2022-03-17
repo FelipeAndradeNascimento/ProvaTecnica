@@ -9,7 +9,7 @@ namespace WebMvcMysql.Data
             : base(options)
         { }
 
-        public DbSet<Usuario> Usuario { get; set; }
+        public DbSet<Caminhao> Caminhao { get; set; }
 
     }
 }

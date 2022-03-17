@@ -1,0 +1,44 @@
+﻿@model WebMvcMysql.Models.Caminhao
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h1>Editar</h1>
+
+<h4>Caminhão</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CaminhaoId" />
+            <div class="form-group">
+                <label asp-for="CaminhaoModelo" class="control-label"></label>
+                <input asp-for="CaminhaoModelo" class="form-control" />
+                <span asp-validation-for="CaminhaoModelo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CaminhaoAnoModelo" class="control-label"></label>
+                <input asp-for="CaminhaoAnoModelo" class="form-control" />
+                <span asp-validation-for="CaminhaoAnoModelo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CaminhaoAnoFabricacao" class="control-label"></label>
+                <input asp-for="CaminhaoAnoFabricacao" class="form-control" />
+                <span asp-validation-for="CaminhaoAnoFabricacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

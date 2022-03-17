@@ -1,0 +1,27 @@
+﻿@model WebMvcMysql.Models.Caminhao
+
+@{
+    ViewData["Title"] = "Excluir";
+}
+
+<h1>Excluir Caminhão</h1>
+
+<h3>Confirmando exclusão do caminhão selecionado?</h3>
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CaminhaoModelo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CaminhaoModelo)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="CaminhaoId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Voltar</a>
+    </form>
+</div>
