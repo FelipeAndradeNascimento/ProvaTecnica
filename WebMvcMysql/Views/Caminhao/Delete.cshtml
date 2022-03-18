@@ -4,11 +4,11 @@
     ViewData["Title"] = "Excluir";
 }
 
-<h1>Excluir Caminhão</h1>
+<h1>Excluir</h1>
 
 <h3>Confirmando exclusão do caminhão selecionado?</h3>
 <div>
-    <h4>Usuario</h4>
+    <h4>Caminhão</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -21,7 +21,7 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="CaminhaoId" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <input type="submit" value="Excluir" class="btn btn-danger" /> |
         <a asp-action="Index">Voltar</a>
     </form>
 </div>
