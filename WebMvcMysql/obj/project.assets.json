@@ -9556,11 +9556,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projetos\\exemploPronto\\CRUD-MVC-MYSQL-NET-6\\WebMvcMysql\\WebMvcMysql.csproj",
+      "projectUniqueName": "C:\\Projetos\\CrudVolvo\\ProvaTecnica\\WebMvcMysql\\WebMvcMysql.csproj",
       "projectName": "WebMvcMysql",
-      "projectPath": "C:\\Projetos\\exemploPronto\\CRUD-MVC-MYSQL-NET-6\\WebMvcMysql\\WebMvcMysql.csproj",
+      "projectPath": "C:\\Projetos\\CrudVolvo\\ProvaTecnica\\WebMvcMysql\\WebMvcMysql.csproj",
       "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos\\exemploPronto\\CRUD-MVC-MYSQL-NET-6\\WebMvcMysql\\obj\\",
+      "outputPath": "C:\\Projetos\\CrudVolvo\\ProvaTecnica\\WebMvcMysql\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

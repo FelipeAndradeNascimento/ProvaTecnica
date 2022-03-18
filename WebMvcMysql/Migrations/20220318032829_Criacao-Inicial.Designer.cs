@@ -10,7 +10,7 @@ using WebMvcMysql.Data;
 namespace WebMvcMysql.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20220317130501_Criacao-Inicial")]
+    [Migration("20220318032829_Criacao-Inicial")]
     partial class CriacaoInicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
