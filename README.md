@@ -8,3 +8,7 @@ Planjei usar API para fazer as chamadas de mudança de cidade; carregar dados so
 
 Vou continuar a trabalhar no projeto, apos concluir o processo de desinstalar as versões de Visual Studio 
 e descobrir a causa do problema de incompatibilidade e não funcionamento do Entity FrameWork
+
+Trabalhei de imediato o layout das telas e navegação; criação dos Model's que contem os campos e tabelas que fazem parte da exibição das telas;
+Ficando pendente a criação do banco de dados e interação via Controller + API para o processo de carga e atualizações de dados ao selecionar uma cidade (combo box)
+e visualização de dados da semana;
